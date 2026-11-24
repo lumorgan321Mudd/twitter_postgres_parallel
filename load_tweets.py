@@ -99,7 +99,6 @@ def insert_tweet(connection,tweet):
         'id_tweets':tweet['id'],
         })
     already_exists = res.first() is not None
-    connection.commit()
 
     if already_exists:
         return
